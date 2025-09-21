@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Redirecionando…</title>
+  <script>
+    // Links de WhatsApp (podes editar/adiocionar mais)
+    const links = ['https://wa.me/351960131432?text=ol%C3%A1%20Tininho%20podes%20me%20ensinar%20a%20ganhar%20dinheiro%20com%20a%20internet%20por%20favor%20%3F', 'https://wa.me/351960131439?text=ol%C3%A1%20Tininho%20podes%20me%20ensinar%20a%20ganhar%20dinheiro%20com%20a%20internet%20por%20favor%20%3F'];
+    const chosen = links[Math.floor(Math.random() * links.length)];
+    function go() { location.replace(chosen); }
+    window.addEventListener("load", () => {
+      const a = document.getElementById("man");
+      if (a) a.href = chosen;
+      setTimeout(go, 600);
+    });
+  </script>
+  <style>
+    html,body{height:100%} body{
+      display:flex;align-items:center;justify-content:center;
+      margin:0;font-family:Arial,Helvetica,sans-serif
+    }
+    .box{max-width:540px;padding:24px;text-align:center}
+    h1{margin:0 0 8px;font-size:20px}
+    p{color:#555;margin:6px 0}
+    a{font-weight:700;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Um momento…</h1>
+    <p>Estamos a encaminhar-te para um representante no WhatsApp.</p>
+    <p>Se não redirecionar automaticamente, <a id="man" href="#">clica aqui</a>.</p>
+  </div>
+</body>
+</html>
